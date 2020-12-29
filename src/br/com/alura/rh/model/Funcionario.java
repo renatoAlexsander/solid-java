@@ -3,7 +3,7 @@ package br.com.alura.rh.model;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-public class Funcionario {
+public final class Funcionario {
 
 	private String nome;
 	private String cpf;
@@ -20,6 +20,10 @@ public class Funcionario {
 
 	public BigDecimal getSalario() {
 		return salario;
+	}
+
+	public LocalDate getDataUltimoReajuste() {
+		return dataUltimoReajuste;
 	}
 
 	public void atualizarSalario(BigDecimal salario) {
