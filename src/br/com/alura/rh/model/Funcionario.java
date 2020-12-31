@@ -26,8 +26,20 @@ public final class Funcionario {
 		return dataUltimoReajuste;
 	}
 
+	public Cargo getCargo() {
+		return cargo;
+	}
+
 	public void atualizarSalario(BigDecimal salario) {
 		this.salario = salario;
 		this.dataUltimoReajuste = LocalDate.now();
+	}
+
+	public boolean isGerente() {
+		return this.cargo.equals(Cargo.GERENTE);
+	}
+
+	public void promover(Cargo cargo) {
+		this.cargo = cargo;
 	}
 }
